@@ -1,0 +1,95 @@
+<%- include('./parts/head', {bot, user,path}) %>
+
+<br><br>
+        
+        <script>function disableclick(e){if(2==e.button)return alert(status),!1}document.onmousedown=disableclick,status="YOU CANT OPEN DEVOLOPERS MODE CONTACT THE TEAM",document.onkeydown=function(e){return status="YOU CANT OPEN DEVOLOPERS MODE CONTACT THE TEAM",123!=event.keyCode&&(e.ctrlKey&&e.shiftKey&&(e.keyCode=="I".charCodeAt(0)||e.keyCode=="i".charCodeAt(0))||e.ctrlKey&&e.shiftKey&&(e.keyCode=="C".charCodeAt(0)||e.keyCode=="c".charCodeAt(0))||e.ctrlKey&&e.shiftKey&&(e.keyCode=="J".charCodeAt(0)||e.keyCode=="j".charCodeAt(0))?(alert(status),!1):(!e.ctrlKey||e.keyCode!="U".charCodeAt(0)&&e.keyCode!="u".charCodeAt(0))&&(!e.ctrlKey||e.keyCode!="S".charCodeAt(0)&&e.keyCode!="s".charCodeAt(0))?void 0:(alert(status),!1))}</script></div><div class=main-content><br><br><br><br><br><div class="container-fluid mt--7"><div class=row><div class="col-xl-4 order-xl-2 mb-5 mb-xl-0"><div class="card card-profile shadow"><div class="row justify-content-center"><div class="col-lg-3 order-lg-2"><div class=card-profile-image><span class=avatar><img alt="Image placeholder" style=width:130% class=rounded-circle src=https://img.devsforum.net/tr/img/r3K9J8.png></span></div></div></div><div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4"></div><div class="card-body pt-0 pt-md-4"><div class=row><div class=col><div class="card-profile-stats d-flex justify-content-center mt-md-5"></div></div></div><div class=text-center><br><h3>Java Script</h3><br><h5>Server count for bhbotlist</h5><div>This will help you to upload server count of your bot on bhbotlist</div><br></div><div class="h6 mt-4"><i class="fad fa-question-circle"></i> Information</div><div class="is-flex mt-1"><div class=box-2-p><i class="mt-1 fad fa-terminal"></i></div><p class=box-2>License : MIT License<br>Version :  1.0.2 <br>Unpacked Size : 10.7 kB<br>Total Files : 4<br></div></div></div></div><div class="col-xl-8 order-xl-1"><span style="float:right;cursor:pointer;transition:all .1s;font-size:20px" data-tooltip="Click and copy to clipboard" data-tooltip-location=top><a class="btn copybtn" onclick='copy("js")'><i class="fad fa-copy has-text-white"></i></a></span><pre style=background-color:#282c34;margin-left:15px;width:100%;display:block!important><code id=js> npm i bhbotlist.js</code></pre></div></div></div></div><script>function copy(c){var e=$("<input>");$("body").append(e),e.val($("#"+c).text()).select(),document.execCommand("copy"),e.remove(),Swal.fire("Successful","Successfully code copied to clipboard.",success)}</script>
+
+
+<div class="col-xl-8 order-xl-1"><span style="float:right;cursor:pointer;transition:all .1s;font-size:20px" data-tooltip="Click and copy to clipboard" data-tooltip-location=top><a class="btn copybtn" onclick='copy("js1")'><i class="fad fa-copy has-text-white"></i></a></span><pre style=background-color:#282c34;margin-left:15px;width:100%;display:block!important><code id=js1>
+// ->  Define Module & Client
+
+
+const Discord = require("discord.js");
+const client = new Discord.Client();
+const bhbotlist = require("bhbotlist.js");
+const dbl = new bhbotlist("TOKEN-HERE", client);
+
+client.login("BotToken");</code></pre><br><br><script>function copy(c){var e=$("<input>");$("body").append(e),e.val($("#"+c).text()).select(),document.execCommand("copy"),e.remove(),Swal.fire("Successful","Successfully code copied to clipboard.",success)}</script>
+
+<div class="col-xl-8 order-xl-1"><span style="float:right;cursor:pointer;transition:all .1s;font-size:20px" data-tooltip="Click and copy to clipboard" data-tooltip-location=top><a class="btn copybtn" onclick='copy("js2")'><i class="fad fa-copy has-text-white"></i></a></span><pre style=background-color:#282c34;margin-left:15px;width:100%;display:block!important><code id=js2>
+// ->  Server Count & Shard Count Posting
+
+
+client.on("ready", async () => {
+  dbl.serverCount();
+  /* 
+  -> Server count posted. 
+  or 
+  -> Server count & shard count posted.
+  */
+
+});</code></pre></div></div></div></div><br><br><script>function copy(c){var e=$("<input>");$("body").append(e),e.val($("#"+c).text()).select(),document.execCommand("copy"),e.remove(),Swal.fire("Successful","Successfully code copied to clipboard.",success)}</script>
+
+<div class="col-xl-8 order-xl-1"><span style="float:right;cursor:pointer;transition:all .1s;font-size:20px" data-tooltip="Click and copy to clipboard" data-tooltip-location=top><a class="btn copybtn" onclick='copy("js3")'><i class="fad fa-copy has-text-white"></i></a></span><pre style=background-color:#282c34;margin-left:15px;width:100%;display:block!important><code id=js3>
+// ->  Vote Checking
+
+
+let hasVote = await dbl.hasVoted("714451348212678658"); // -> User ID
+  if(hasVote === true) {
+      console.log("Voted")
+    } else {
+      console.log("Vote please.")
+  }
+// -> Vote please</code></pre></div></div></div></div><br><br><script>function copy(c){var e=$("<input>");$("body").append(e),e.val($("#"+c).text()).select(),document.execCommand("copy"),e.remove(),Swal.fire("Successful","Successfully code copied to clipboard.",success)}</script>
+
+<div class="col-xl-8 order-xl-1"><span style="float:right;cursor:pointer;transition:all .1s;font-size:20px" data-tooltip="Click and copy to clipboard" data-tooltip-location=top><a class="btn copybtn" onclick='copy("js4")'><i class="fad fa-copy has-text-white"></i></a></span><pre style=background-color:#282c34;margin-left:15px;width:100%;display:block!important><code id=js4>
+// ->  Search on bhbotlist
+
+
+let botFind = await dbl.search("779641401482805289");
+console.log(botFind.username) // -> Allegro</code></pre></div></div></div></div><br><br><script>function copy(c){var e=$("<input>");$("body").append(e),e.val($("#"+c).text()).select(),document.execCommand("copy"),e.remove(),Swal.fire("Successful","Successfully code copied to clipboard.",success)}</script>
+
+
+
+
+
+        
+        <script>function disableclick(e){if(2==e.button)return alert(status),!1}document.onmousedown=disableclick,status="YOU CANT OPEN DEVOLOPERS MODE CONTACT THE TEAM",document.onkeydown=function(e){return status="YOU CANT OPEN DEVOLOPERS MODE CONTACT THE TEAM",123!=event.keyCode&&(e.ctrlKey&&e.shiftKey&&(e.keyCode=="I".charCodeAt(0)||e.keyCode=="i".charCodeAt(0))||e.ctrlKey&&e.shiftKey&&(e.keyCode=="C".charCodeAt(0)||e.keyCode=="c".charCodeAt(0))||e.ctrlKey&&e.shiftKey&&(e.keyCode=="J".charCodeAt(0)||e.keyCode=="j".charCodeAt(0))?(alert(status),!1):(!e.ctrlKey||e.keyCode!="U".charCodeAt(0)&&e.keyCode!="u".charCodeAt(0))&&(!e.ctrlKey||e.keyCode!="S".charCodeAt(0)&&e.keyCode!="s".charCodeAt(0))?void 0:(alert(status),!1))}</script></div></div></nav><title>API | Server count for bhbotlist</title><head><meta property=og:title content="Server count for bhbotlist"><meta property=og:description content="This will help you to upload server count of your bot on bhbotlist"><link rel=stylesheet href=//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css><link rel=stylesheet href=https://highlightjs.org/static/demo/styles/atom-one-dark.css><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js></script><script>hljs.highlightAll()</script><script>function copyFunction(){const e=document.getElementById("myCommands").textContent,t=document.createElement("textarea");t.textContent=e,document.body.append(t),t.select(),document.execCommand("copy")}document.getElementById("copybtn").addEventListener("click",copyFunction)</script></head><div class=main-content><br><br><br><br><br><div class="container-fluid mt--7"><div class=row><div class="col-xl-4 order-xl-2 mb-5 mb-xl-0"><div class="card card-profile shadow"><div class="row justify-content-center"><div class="col-lg-3 order-lg-2"><div class=card-profile-image><span class=avatar><img alt="Image placeholder" style=width:130% class=rounded-circle src=../../img/py3.png></span></div></div></div><div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4"></div><div class="card-body pt-0 pt-md-4"><div class=row><div class=col><div class="card-profile-stats d-flex justify-content-center mt-md-5"></div></div></div><br><div class=text-center><br><h3>Python</h3><br><h5>Server count for bhbotlist</h5><div>This will help you to upload server count of your bot on bhbotlist</div><br></div><div class="h6 mt-4"><i class="fad fa-question-circle"></i> Information</div><div class="is-flex mt-1"><div class=box-2-p><i class="mt-1 fad fa-terminal"></i></div><p class=box-2>License : MIT License<br>Author : BHBL <br>Requires : Python >=3.6<br>Total Files : 1<br></p></div></div></div></div>
+        
+        <div class="col-xl-8 order-xl-1"><span style="float:right;cursor:pointer;transition:all .1s;font-size:20px" data-tooltip="Click and copy to clipboard" data-tooltip-location=top><a class="btn copybtn" onclick='copy("py")'><i class="fad fa-copy has-text-white"></i></a></span><pre style=background-color:#282c34;margin-left:15px;width:100%;display:block!important><code id=py>  pip install bhbotlist</code></pre></div></div></div></div>
+        <br><br><script>function copy(c){var e=$("<input>");$("body").append(e),e.val($("#"+c).text()).select(),document.execCommand("copy"),e.remove(),Swal.fire("Successful","Successfully code copied to clipboard.",success)}</script>
+
+        <div class="col-xl-8 order-xl-1"><span style="float:right;cursor:pointer;transition:all .1s;font-size:20px" data-tooltip="Click and copy to clipboard" data-tooltip-location=top><a class="btn copybtn" onclick='copy("py1")'><i class="fad fa-copy has-text-white"></i></a></span><pre style=background-color:#282c34;margin-left:15px;width:100%;display:block!important><code id=py1>
+         #Server Count Post 
+
+ from bhbotlist import bhbotlist
+from discord.ext import commands
+
+client = commands.Bot(command_prefix="!") 
+dbl = bhbotlist(client,"token of bhbotlist")
+
+@client.event
+async def on_ready():
+  x = await dbl.serverCountPost()
+  print(x)
+
+client.run("token")</code></pre></div></div></div></div>
+        <br><br><script>function copy(c){var e=$("<input>");$("body").append(e),e.val($("#"+c).text()).select(),document.execCommand("copy"),e.remove(),Swal.fire("Successful","Successfully code copied to clipboard.",success)}</script>
+        
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%- include('./parts/foot') %>

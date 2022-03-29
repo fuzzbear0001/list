@@ -1,0 +1,69 @@
+<%- include('../../parts/head', {bot, user, path}) %>
+<%- include('../../parts/edit-head') %>
+<style>
+.form-control {
+  background-color: var(--form-input);
+  color: var(--input-color);
+  border: none;
+}
+.form-control:focus {
+  background-color: var(--form-input);
+  color: var(--input-color);
+  border: 3px solid var(--button-green);
+}
+  label {
+    color: var(--label-color)!important;
+  }
+input[type="text"]:disabled {
+  background-color: var(--input-disabled);
+  color: gray;
+  border: none;
+  cursor: not-allowed;
+}
+</style>
+<div class="dashboard-content container"><style>.form-control{background-color:var(--form-input);color:var(--input-color);border:none}.form-control:focus{background-color:var(--form-input);color:var(--input-color);border:3px solid var(--button-green)}label{color:var(--label-color)!important}input[type=text]:disabled{background-color:var(--input-disabled);color:gray;border:none;cursor:not-allowed}</style>
+<div style="background-color:var(--form-background)" class="container p-4">
+<br><br>
+  <form method="POST">
+  <div class="row">
+    <div class="col-md-6">
+      <p style="color:red">Do not transfer ownership if you do not want to lose access to this project.</p>
+      <div class="form-group">
+        <label>Transfer to another user</label>
+        <p style="color:gray">This grants full ownership to another user.</p>
+        <input type="text" name="userID" required="" id="userID" class="form-control" placeholder="891564060791939072" minlength="18" maxlength="18">
+        </div>
+        </div></div>
+        <button type="button" name="btnSubmit" onclick="if (!window.__cfRLUnblockHandlers) return false; clickOnEdit()" id="myButton" class="btn btn-danger">
+          Transfer to user
+          </button></form></div></div>
+<script>
+    var urlParams = new URLSearchParams(window.location.search);
+    if(urlParams.has('success') && urlParams.get('success')){
+    Swal.fire({
+     icon: 'success',
+     title: 'Successful...',
+     closeOnConfirm: false,
+     text: urlParams.get('message'),
+     footer: 'Copyright 2021 bhbotlist.xyz - All right reserved.'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        window.location.href = `/bot/${urlParams.get('botID')}`;
+      }
+    })
+    }
+    if(urlParams.has('error') && urlParams.get('error')){
+    Swal.fire({
+     icon: 'error',
+     title: 'Oops...',
+     text: urlParams.get('message'),
+     footer: 'Copyright 2021 bhbotlist.xyz - All right reserved.'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        window.location.href = `/bot/${urlParams.get('botID')}/edit`;
+      }    
+    })
+    }
+   </script>
+</div></div>
+<%- include('../../parts/foot') %>

@@ -1,0 +1,22 @@
+{
+  "partners": [
+    {
+      "code": "784764352941689954223644989911738926",
+      "icon": "https://cdn.discordapp.com/avatars/952940222629437510/d54b21b820f73eea2e33ce47c24a40d0.webp",
+      "ownerID": "874232899342307388",
+      "serverName": "NightBot",
+      "website": "https://discord.com/oauth2/authorize?client_id=952940222629437510&permissions=1248158153975&scope=bot%20applications.commands",
+      "support": "https://discord.gg/kGn2D8zQ",
+      "description": "\t\r\nNightBot is a smart bot with only slash commands \r\n\r\nto get started type /help. if u have any suggestions u can type /suggest if u see someone abusing NightBot do /report-user and report them i will handle it than\r\nthe support sever is not Done so is NightBot! so if it doesnt respond im working on it \r\n\r\nand NightBot has a antiCrash so no need to worry!\r\nThanks for adding NightBot to ur server hope u like it!\r\n\r\n\r\nNightBot Beta!"
+    },
+    {
+      "code": "428159425456492564968663436564868282",
+      "icon": "https://cdn.discordapp.com/attachments/943231873566511104/957265481537036338/unknown.png",
+      "ownerID": "787241442770419722",
+      "serverName": "TopicBotList",
+      "website": "https://vcodez.xyz/",
+      "support": "https://discord.gg/jrUcHa7Rcy",
+      "description": "TopicBotList is a new and growing Bot & Server listing site. \r\nTbl have some unique features and a user friendly design.\r\nIt's easy to add your bot or server to site in just couple of minutes.\r\nThe server approval time is just a second as it is automated but approval time for bots can take around 1-6 hours\r\n\r\nLet's come together and make a strong community of developers.\r\n"
+    }
+  ]
+}

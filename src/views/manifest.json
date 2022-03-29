@@ -1,0 +1,17 @@
+{
+    "name": "BHBOTLIST",
+    "short_name": "BHBL",
+    "theme_color": "#ffcbe4",
+    "background_color": "#fa99ca",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "https://bhbotlist.xyz/",
+    "description": "DISCORD SERVER AND BOTLIST.",
+    "orientation": "any",
+    "icons": [
+        {
+            "src": "https://bhbotlist.xyz/img/logo.png",
+            "sizes": "1024x1024"
+        }
+    ]
+}

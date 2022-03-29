@@ -1,0 +1,78 @@
+<%- include('parts/head', {bot, user, path}) %>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1831947467874577"
+     crossorigin="anonymous"></script>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Lates News from BHBotlist.">
+  <title>BHBotlist News</title>
+  <meta name="publisher" content="BHBL" />
+  <meta property="title" content="News from bhbotlist.xyz">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:creator" content="BHBL">
+  <meta name="twitter:title" content="News from BHBotlist">
+  <meta name="twitter:description" content="Latest news from bhbotlist">
+  <meta name="twitter:image" content="../img/logo.png">
+  <meta property="og:url" content="/">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:title" content="News from BHBotlist">
+  <meta name="theme-color" content="#7289da">
+  <meta property="og:description" content="Latest news from bhbotlist">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="../img/logo.png">
+</head>
+<link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/fonts/simple-line-icons/style.min.css">
+<link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/colors.min.css">
+<style>
+  .partner-ownerName {
+    color: #fff;
+    padding: 5px;
+  }
+  .partner-ownerName:hover {
+    color: #ccc;
+  }
+</style>
+<div class="container">
+<br><br><br><br>
+<center>
+<p class="has-text-white title is-large"><i class="fad fa-newspaper has-text-primary"></i>&nbsp;News</p>
+<!-- <p class="content has-text-white" style="margin-top: -20px;">Join our <a href="/dc">discord server</a> for more.</p> -->
+</center>
+
+<div class="columns is-multiline is-desktop is-variable is-7 mt-3 pt-5">
+  <% db.get(`news`).map(a => { %>
+
+
+        <div class="col-md-6 col-lg-4 pb-3"><div data-aos=fade-left><div class="card vcodes-card-custom bg-vcodes border-white border-0"><div class=vcodes-card-custom-img style="background-image: url(https://media1.giphy.com/media/xTiTnxpQ3ghPiB2Hp6/giphy_s.gif);" title="BHBotlist.xyz" ></div>
+
+
+<div class=vcodes-card-custom-avatar><img draggable=false class=pulse-avatar-offline src="<%=a.icon%>" alt=Avatar><center></div></center>
+
+<div class=card-body><h4 translate=no class=card-title><center><%= a.serverName %>
+              <span data-tooltip="Verified News" data-tooltip-location="top"><i class="fad fa-badge-check has-text-success"></i></span></h2></center>
+<div class=vcodes_column>
+<div style=border-color:#0c0c0c class=vcodes_teamcard onclick='location.href="/user/671390595184459782"'>
+<div class=user><h1>Writen by :  <small><span class="card-title"><%= bot.users.cache.get(a.ownerID) ? bot.users.cache.get(a.ownerID).username : "undefined" %>#<%= bot.users.cache.get(a.ownerID) ? bot.users.cache.get(a.ownerID).discriminator : "0000" %></span></small>
+<br><br>publish date : <small><%= a.date %></h1></small>
+</div></div></div>
+<h6><p translate=no class="card-text vCodesbotDesc"><%= a.description %>
+</p></div></div></div></div>
+      
+  <% }) %>
+
+
+
+</div>
+</div>
+  <script>
+   function onSubmit(token) {
+     document.getElementById("demo-form").submit();
+   }
+ </script>
+ <button class="g-recaptcha" 
+        data-sitekey="6LeKwn0bAAAAAC8ERPF287E5aDcEjwF5EowN-4W8" 
+        data-callback='onSubmit' 
+        data-action='submit' style="display: none;">Submit</button>
+<%- include('parts/foot') %>

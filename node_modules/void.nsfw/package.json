@@ -1,0 +1,23 @@
+{
+  "name": "void.nsfw",
+  "version": "1.0.8-beta",
+  "description": "It is a simple nsfw module, it assigns photos from gif to png in most extensions.",
+  "main": "void.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VoidDevsorg/void-nsfw"
+  },
+  "keywords": [
+    "nsfw",
+    "nudity",
+    "pornograhy"
+  ],
+  "author": "Claudette",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}

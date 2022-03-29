@@ -1,0 +1,71 @@
+<html style="height: 100%;">
+<head>
+<meta name="viewport" content="width=device-width, minimum-scale=0.1">
+<%- include('../parts/links') %>
+<head>
+    <title><%= member.username %></title>
+    <link rel="icon" href="https://cdn.discordapp.com/avatars/<%=member.id%>/<%=member.avatar%>.png" type="image/x-icon" />
+    <meta property="og:title" content="<%= member.username %>">
+    <meta property="og:description" content="<%= botdata.shortDesc %>">
+    <meta property="og:image" content="https://cdn.discordapp.com/avatars/<%=member.id%>/<%=member.avatar%>.png">
+</head>
+
+<style>
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.separator::after {
+  content: '';
+  flex: 2;
+  border-bottom: 1px solid #fff;
+}
+
+.separator:not(:empty)::before {
+  margin-right: .55em;
+}
+
+.separator:not(:empty)::after {
+  margin-left: .55em;
+}
+
+</style>
+
+    <!-- Page content -->
+    <div style = "position:relative;left:3px;top:1px;">
+        <div class="col-xl-4 order-xl-2 mb-5 mb-xl-0">
+          <div class="card card-profile">
+            
+            <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+              <div class="d-flex justify-content-between">
+                <a href="/user/<%= member.id%>"  target="_blank" class="btn btn-vcodes mr-4"><i class="fad fa-vote-yea"></i> profile</a>
+                <a href="https://discord.com/users/<%= member.id%>"  target="_blank" class="btn btn-vcodes mr-4"><i class="fa fa-user"></i> <%= member.username%></a>
+            
+              </div><br><br>
+              
+              <div class="row justify-content-center">
+              <div class="col-lg-3 order-lg-2">
+                <div class="card-profile-image">
+                  <span class="avatar">
+                    <img alt="Image placeholder" onerror="imgError(this)" class="rounded-circle mr-4" src="https://cdn.discordapp.com/avatars/<%=member.id%>/<%=member.avatar%>.png">
+                  </span>
+                </div>
+              </div>
+            </div>
+
+              <div>
+              <div class="d-flex justify-content-between">
+                <a href="https://bhbotlist.xyz"  target="_blank" style="background: rgb(33, 167, 111);" class="btn btn-vcodes mr-4"><i class="fad fa-vote-yea">&nbsp;&nbsp;</i>B.H Botlist</a>
+                
+                
+                
+            <a  style="background:"  class="btn btn-vcodes mr-4"><i class="mt-1 fad fa-circle status-<%= bot.users.cache.get(member.id).presence.status %>"></i>Status</a>
+              </div>
+              </div>
+            </div>
+            </div>
+            
+         
+
