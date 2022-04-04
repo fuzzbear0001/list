@@ -359,8 +359,7 @@ client.on('ready', async () => {
 /*=======================================================================================*/
 
 /*=======================================================================================*/
-const votes = require('./src/database/models/botlist/vote.js');
-const votesServer = require('./src/database/models/servers/user.js');
+
 client.on('ready', async () => {
 	setInterval(async () => {
 		let datalar = await votes.find();
