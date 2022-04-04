@@ -420,8 +420,7 @@ global.clientSL = serverClient;
 require('./src/servers/client.js');
 
 /*=======================================================================================*/
-require('./src/server.js')(client);
-require('./src/database/connect.js')(client);
+
 
 client.login(config.bot.token);
 client.on('ready', async () => {
