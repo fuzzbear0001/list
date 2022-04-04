@@ -444,8 +444,7 @@ client.on('ready', async () => {
 
 // BOT/SERVER VOTES & ANALYTICS
 const { CronJob } = require('cron');
-const botlar = require('./src/database/models/botlist/bots.js');
-const servers = require('./src/database/models/servers/server.js');
+
 client.on('ready', async () => {
 	var resetStats = new CronJob(
 		'00 00 1 * *',
